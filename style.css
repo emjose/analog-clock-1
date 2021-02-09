@@ -10,7 +10,7 @@ body {
 body {
   display: grid;
   place-items: center;
-  background: #dde1e7;
+  background: #f1f1f1;
   text-align: center;
 }
 .clock {
@@ -18,9 +18,9 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #dde1e7;
-  height: 250px;
-  width: 250px;
+  background: #f1f1f1;
+  height: 270px;
+  width: 270px;
   border-radius: 50%;
   box-shadow: -3px -3px 7px #ffffff9c,
     3px 4px 10px 3px rgba(94, 104, 121, 0.188);
@@ -30,9 +30,9 @@ body {
   content: "";
   height: 220px;
   width: 220px;
-  background: #dde1e7;
+  background: #f1f1f1;
   border-radius: 50%;
-  box-shadow: inset -3px -3px 7px #ffffff9c,
+  box-shadow: inset -3px -3px 7px #fff,
     inset 3px 3px 7px rgba(94, 104, 121, 0.288);
 }
 .clock:after {
@@ -40,9 +40,9 @@ body {
   content: "";
   height: 120px;
   width: 120px;
-  background: #dde1e7;
+  background: #f1f1f1;
   border-radius: 50%;
-  box-shadow: -1px -1px 5px #ffffff9c, 1px 1px 3px rgba(94, 104, 121, 0.288);
+  box-shadow: -1px -1px 5px #fff, 1px 1px 3px rgba(94, 104, 121, 0.288);
 }
 .clock .center-nut {
   height: 15px;
