@@ -1,6 +1,6 @@
 <p id="project-title"><p>
 
-<a href=#table-of-contents>![project-title](Assets/inter-008-clock-1.png)</a> 
+<a href=#table-of-contents>![Analog Clock 1](Assets/inter-008-clock-1.png)</a> 
 
 #
 
