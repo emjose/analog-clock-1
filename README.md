@@ -34,7 +34,10 @@
 
 <a href=#100days>![#100DaysOfCode](Assets/inter-100hash.png)</a>  
 
-<a href=#100days>![Under Construction](Assets/lorem-text.png)</a>
+### Day 8: February 11, 2021
+- I love analog clocks, and I looked up tutorials on how to make clocks with JavaScript, HTML, and CSS.
+
+- This clock has a <a href="https://medium.com/@artofofiare/neumorphism-the-right-way-a-2020-design-trend-386e6a09040a#:~:text=Neumorphism%20(or%20Neo%2Dskeuomorphism),New%E2%80%9D%20and%20%E2%80%9CSkeuomorphism%E2%80%9D.">neumorphism</a> design style, which is defined by forms protruding from or imprinting on a surface. See <a href="https://github.com/emjose/analog-clock-2/#header">second clock project</a>.
 
 #
 
@@ -57,7 +60,7 @@ open index.html
 
 <a href="https://emjose.github.io/analog-clock-1/">![Live Site](Assets/inter-live-site.png)</a>  
 
-<a href="https://emjose.github.io/analog-clock-1/">![Under Construction](Assets/lorem-live.png)</a>
+<a href="https://emjose.github.io/analog-clock-1/">![Live Site](Assets/008-clock-1.gif)</a>
 
 #
 
@@ -65,7 +68,15 @@ open index.html
 
 <a href=#resources>![Resources](Assets/inter-resources.png)</a>  
 
-<a href=#resources>![Under Construction](Assets/lorem-text.png)</a>
+- #### [50 Projects in 50 Days](https://50projects50days.com/)
+
+- #### [Neumorphism Generator](https://neumorphism.io/) by [Adam Giebl](https://github.com/adamgiebl)
+
+- #### [Neumorphism Analog Clock Tutorial](https://youtu.be/NVoIEEb0Hqg) by [CodingNepal](https://www.youtube.com/channel/UCk7xIEmd3MeyhIu2StLX5yA)
+
+- #### [Neumorphism the Right Way — A 2020 Design Trend](https://medium.com/@artofofiare/neumorphism-the-right-way-a-2020-design-trend-386e6a09040a#:~:text=Neumorphism%20(or%20Neo%2Dskeuomorphism),let's%20look%20at%20%E2%80%9CSkeuomorphism%E2%80%9D.)
+
+- #### [Theme Clock Tutorial from the 50 Projects in 50 Days Udemy Course](https://www.udemy.com/course/50-projects-50-days/)
 
 #
 
