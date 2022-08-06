@@ -48,13 +48,13 @@
 
 #### Git clone and cd into the repo folder:
 
-```
+```console
 git clone git@github.com:emjose/analog-clock-1.git && cd analog-clock-1
 ```
 
 #### Run the command:
 
-```
+```console
 open index.html
 ```
 
