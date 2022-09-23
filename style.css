@@ -1,189 +1,291 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+:root {
+	--white: #fff;
+	--black: #000;
+	--red: #e95949;
+	--blue: #3498db;
+	--gray-1: rgba(94, 104, 121, 0.188);
+	--gray-2: #ffffff9c;
+	--gray-3: #404040;
+	--gray-4: #303030;
+	--body-color: #f1f1f1;
+	--github-fill: #151513;
+	--github-color: var(--body-color);
+	--github-focus: var(--red);
+	--clock-shadow: -3px -3px 7px var(--gray-2), 3px 4px 10px 3px var(--gray-1);
+	--clock-before-shadow: inset -3px -3px 7px var(--white), inset 3px 3px 7px var(--gray-1);
+	--clock-after-shadow: -1px -1px 5px var(--white), 1px 1px 3px var(--gray-1);
 }
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
 html,
 body {
-  height: 88.5%;
+	height: 88.5%;
 }
+
 body {
-  display: grid;
-  place-items: center;
-  background: #f1f1f1;
-  text-align: center;
+	display: grid;
+	place-items: center;
+	text-align: center;
 }
-.clock {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #f1f1f1;
-  height: 270px;
-  width: 270px;
-  border-radius: 50%;
-  box-shadow: -3px -3px 7px #ffffff9c,
-    3px 4px 10px 3px rgba(94, 104, 121, 0.188);
-}
-.clock:before {
-  position: absolute;
-  content: "";
-  height: 220px;
-  width: 220px;
-  background: #f1f1f1;
-  border-radius: 50%;
-  box-shadow: inset -3px -3px 7px #fff,
-    inset 3px 3px 7px rgba(94, 104, 121, 0.288);
-}
+
+body,
+.clock,
+.clock:before,
 .clock:after {
-  position: absolute;
-  content: "";
-  height: 120px;
-  width: 120px;
-  background: #f1f1f1;
-  border-radius: 50%;
-  box-shadow: -1px -1px 5px #fff, 1px 1px 3px rgba(94, 104, 121, 0.288);
+	background: var(--body-color);
 }
-.clock .center-nut {
-  height: 15px;
-  width: 15px;
-  background: #404040;
-  border-radius: 50%;
-  z-index: 2;
-  position: absolute;
-}
+
+.clock,
+.clock:before,
+.clock:after,
+.clock .center-nut,
 .clock .center-nut2 {
-  height: 9px;
-  width: 9px;
-  background: #3498db;
-  border-radius: 50%;
-  z-index: 15;
-  position: absolute;
+	border-radius: 50%;
 }
-.indicators div {
-  position: absolute;
-  width: 2px;
-  height: 5px;
-  background: #404040;
+
+.clock {
+	position: relative;
+	align-items: center;
+	height: 270px;
+	width: 270px;
+	box-shadow: var(--clock-shadow);
 }
-.indicators div:nth-child(1) {
-  transform: rotate(30deg) translateY(-100px);
+
+.clock:before,
+.clock:after,
+.sec:before,
+.sec:after,
+.min:before,
+.min:after,
+.hr:before,
+.hr:after {
+	content: "";
 }
-.indicators div:nth-child(2) {
-  transform: rotate(60deg) translateY(-100px);
+
+.clock:before {
+	height: 220px;
+	width: 220px;
+	box-shadow: var(--clock-before-shadow);
 }
-.indicators div:nth-child(3) {
-  background: #3498db;
-  transform: rotate(90deg) translateY(-100px);
+
+.clock:after {
+	height: 120px;
+	width: 120px;
+	box-shadow: var(--clock-after-shadow);
 }
-.indicators div:nth-child(4) {
-  transform: rotate(120deg) translateY(-100px);
+
+.clock .center-nut {
+	height: 15px;
+	width: 15px;
+	background: var(--gray-3);
+	z-index: 2;
 }
-.indicators div:nth-child(5) {
-  transform: rotate(150deg) translateY(-100px);
-}
-.indicators div:nth-child(6) {
-  background: #3498db;
-  transform: rotate(180deg) translateY(-100px);
-}
-.indicators div:nth-child(7) {
-  transform: rotate(210deg) translateY(-100px);
-}
-.indicators div:nth-child(8) {
-  transform: rotate(240deg) translateY(-100px);
-}
-.indicators div:nth-child(9) {
-  background: #3498db;
-  transform: rotate(270deg) translateY(-100px);
-}
-.indicators div:nth-child(10) {
-  transform: rotate(300deg) translateY(-100px);
-}
-.indicators div:nth-child(11) {
-  transform: rotate(330deg) translateY(-100px);
-}
+
+.sec:before,
+.sec:after,
+.clock .center-nut2,
+.indicators div:nth-child(3),
+.indicators div:nth-child(6),
+.indicators div:nth-child(9),
 .indicators div:nth-child(12) {
-  background: #3498db;
-  transform: rotate(360deg) translateY(-100px);
+	background: var(--blue);
 }
+
+.clock .center-nut2 {
+	height: 9px;
+	width: 9px;
+	z-index: 15;
+}
+
+.indicators div {
+	width: 2px;
+	height: 5px;
+	background: var(--gray-3);
+}
+
+.indicators div:nth-child(1) {
+	transform: rotate(30deg) translateY(-100px);
+}
+
+.indicators div:nth-child(2) {
+	transform: rotate(60deg) translateY(-100px);
+}
+
+.indicators div:nth-child(3) {
+	transform: rotate(90deg) translateY(-100px);
+}
+
+.indicators div:nth-child(4) {
+	transform: rotate(120deg) translateY(-100px);
+}
+
+.indicators div:nth-child(5) {
+	transform: rotate(150deg) translateY(-100px);
+}
+
+.indicators div:nth-child(6) {
+	transform: rotate(180deg) translateY(-100px);
+}
+
+.indicators div:nth-child(7) {
+	transform: rotate(210deg) translateY(-100px);
+}
+
+.indicators div:nth-child(8) {
+	transform: rotate(240deg) translateY(-100px);
+}
+
+.indicators div:nth-child(9) {
+	transform: rotate(270deg) translateY(-100px);
+}
+
+.indicators div:nth-child(10) {
+	transform: rotate(300deg) translateY(-100px);
+}
+
+.indicators div:nth-child(11) {
+	transform: rotate(330deg) translateY(-100px);
+}
+
+.indicators div:nth-child(12) {
+	transform: rotate(360deg) translateY(-100px);
+}
+
+.sec,
+.min,
+.hr,
 .sec-hand,
 .min-hand,
-.hr-hand {
-  position: absolute;
+.hr-hand,
+.sec:before,
+.sec:after,
+.min:before,
+.min:after,
+.hr:before,
+.hr:after,
+.clock:before,
+.clock:after,
+.clock .center-nut,
+.clock .center-nut2,
+.indicators div {
+	position: absolute;
 }
+
 .sec-hand,
 .sec {
-  height: 180px;
-  width: 180px;
-  z-index: 6;
+	height: 180px;
+	width: 180px;
+	z-index: 6;
 }
+
 .min-hand,
 .min {
-  height: 140px;
-  width: 140px;
-  z-index: 5;
+	height: 140px;
+	width: 140px;
+	z-index: 5;
 }
+
 .hr-hand,
 .hr {
-  height: 110px;
-  width: 110px;
-  z-index: 4;
+	height: 110px;
+	width: 110px;
+	z-index: 4;
 }
+
+.clock,
 .sec,
 .min,
 .hr {
-  display: flex;
-  justify-content: center;
-  position: absolute;
+	display: flex;
+	justify-content: center;
 }
+
 .sec:before {
-  position: absolute;
-  content: "";
-  height: 110px;
-  width: 3px;
-  background: #3498db;
+	height: 110px;
+	width: 3px;
 }
+
 .sec:after {
-  position: absolute;
-  content: "";
-  height: 35px;
-  width: 7px;
-  background: #3498db;
-  top: 105px;
-  border-radius: 5px;
+	height: 35px;
+	width: 7px;
+	top: 105px;
+	border-radius: 5px;
 }
-.min:before {
-  position: absolute;
-  content: "";
-  width: 1px;
-  top: -15px;
-  border-left: 3px solid transparent;
-  border-right: 3px solid transparent;
-  border-bottom: 60px solid #e95949;
-}
-.min:after {
-  position: absolute;
-  content: "";
-  width: 3px;
-  top: 40px;
-  border-left: 2px solid transparent;
-  border-right: 2px solid transparent;
-  border-top: 30px solid #e95949;
-}
+
+.min:before,
 .hr:before {
-  position: absolute;
-  content: "";
-  width: 1px;
-  border-left: 3px solid transparent;
-  border-right: 3px solid transparent;
-  border-bottom: 35px solid #303030;
+	border-left: 3px solid transparent;
+	border-right: 3px solid transparent;
 }
+
+.min:after,
 .hr:after {
-  position: absolute;
-  content: "";
-  width: 3px;
-  top: 34px;
-  border-left: 2px solid transparent;
-  border-right: 2px solid transparent;
-  border-top: 25px solid #303030;
+	border-left: 2px solid transparent;
+	border-right: 2px solid transparent;
+}
+
+.min:before {
+	width: 1px;
+	top: -15px;
+	border-bottom: 60px solid var(--red);
+}
+
+.min:after {
+	width: 3px;
+	top: 40px;
+	border-top: 30px solid var(--red);
+}
+
+.hr:before {
+	width: 1px;
+	border-bottom: 35px solid var(--gray-4);
+}
+
+.hr:after {
+	width: 3px;
+	top: 34px;
+	border-top: 25px solid var(--gray-4);
+}
+
+.github-corner:focus svg path {
+	fill: var(--github-focus);
+}
+
+.github-corner:focus .octo-arm,
+.github-corner:focus .octo-body {
+	fill: var(--github-color);
+}
+
+.github-corner:hover .octo-arm,
+.github-corner:focus .octo-arm {
+	animation: octocat-wave 560ms ease-in-out;
+}
+
+@keyframes octocat-wave {
+	0%,
+	100% {
+		transform: rotate(0);
+	}
+	20%,
+	60% {
+		transform: rotate(-25deg);
+	}
+	40%,
+	80% {
+		transform: rotate(10deg);
+	}
+}
+
+@media (max-width: 500px) {
+	.github-corner:hover .octo-arm {
+		animation: none;
+	}
+	.github-corner .octo-arm {
+		animation: octocat-wave 560ms ease-in-out;
+	}
 }
